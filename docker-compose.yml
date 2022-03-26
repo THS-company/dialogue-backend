@@ -1,0 +1,14 @@
+version: '3'
+services:
+  node-dev:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - .:/app
+    ports:
+      - 3001:3000
+    entrypoint: >
+      /bin/sh -c "sleep 86400"
+      
